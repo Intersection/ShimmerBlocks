@@ -104,6 +104,8 @@ private extension ShimmerContainer {
             sectionSubviews.forEach { stackView.addArrangedSubview($0) }
             containerView = stackView
         }
+        containerView.layer.cornerRadius = data.view?.layer.cornerRadius ?? 0
+        containerView.clipsToBounds = true
         return containerView
     }
 
